@@ -1,0 +1,42 @@
+{
+  "name": "side-by-side",
+  "version": "1.0.1",
+  "description": "Desktop app wrapping Dash Side by Side",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-builder"
+  },
+  "build": {
+    "appId": "com.newwelltechnologies.sidebyside",
+    "productName": "Side by Side",
+    "files": [
+      "**/*"
+    ],
+    "directories": {
+      "buildResources": "assets"
+    },
+    "win": {
+      "icon": "assets/favicon.ico",
+      "target": "nsis"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowElevation": true,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Side by Side"
+    },
+    "asar": false,
+    "publish": null
+  },
+  "devDependencies": {
+    "electron": "^25.9.8",
+    "electron-builder": "^24.13.3"
+  },
+  "keywords": [],
+  "author": "New Well Technologies",
+  "license": "ISC"
+}
